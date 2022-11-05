@@ -17,12 +17,20 @@ except:
     print("unable to load file")
     exit(1)
     
-firstLine = loadFile.readline()
+readLine = loadFile.readline()
+line=0
+while(line<5):
+    if readLine == "":
+        readLine = loadFile.readline()
+    else:
+        break
+           
 tableName = firstLine.split()
 print(tableName)
 if tableName == "":
-    print("First List is empty")
+    print("Read is empty")
     exit(1)
+    
 schemaName = ""
 schemaType = ""
 for i in tableName:
