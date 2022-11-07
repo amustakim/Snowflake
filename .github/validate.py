@@ -38,7 +38,7 @@ schemaType = ""
 for i in tableName:
     if "Schema" in i or "schema" in i or "SCHEMA" in i:
         print(i)
-        schemaName = i
+        schemaName = join([i[0].upper(), i[1:]])
     if "table" in i or "Table" in i or "TABLE" in i:
         schemaType = "Tables"
     elif "view" in i or "View" in i or "VIEW" in i:
