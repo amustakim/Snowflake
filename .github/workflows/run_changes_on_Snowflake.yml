@@ -49,7 +49,7 @@ jobs:
             then 
                 echo "$file was changed"
                 python .github/validate.py $file
-                 ~/snowflake/snowsql -f $file 
+                 ~/snowflake/snowsql -f $file -o exit_on_error=true
             fi
           done
       # - name: Execute SQL against Snowflake
